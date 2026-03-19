@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amoluk Language App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero card">
+        <p class="eyebrow">Amoluk Language App</p>
+        <h1>Build confidence with practical daily Amoluk lessons.</h1>
+        <p class="hero-copy">
+          A lightweight study app with vocabulary drills, sentence practice,
+          and quick progress tracking for beginners.
+        </p>
+        <div class="hero-stats">
+          <article>
+            <strong>24</strong>
+            <span>core words</span>
+          </article>
+          <article>
+            <strong>3</strong>
+            <span>lesson types</span>
+          </article>
+          <article>
+            <strong>5 min</strong>
+            <span>daily goal</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="card lesson-card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Lesson 1</p>
+              <h2>Core vocabulary</h2>
+            </div>
+            <span class="badge">Flashcards</span>
+          </div>
+          <p>
+            Tap through essential greetings, family terms, food, and travel
+            phrases.
+          </p>
+          <div class="flashcard" id="flashcard" aria-live="polite">
+            <p class="flashcard-label">Amoluk</p>
+            <h3 id="word-native">Kulo</h3>
+            <p id="word-english">Hello</p>
+          </div>
+          <div class="controls">
+            <button id="prev-word" class="secondary">Previous</button>
+            <button id="next-word">Next card</button>
+          </div>
+        </article>
+
+        <article class="card lesson-card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Lesson 2</p>
+              <h2>Sentence builder</h2>
+            </div>
+            <span class="badge">Practice</span>
+          </div>
+          <p>Match a useful phrase with its English meaning.</p>
+          <div class="prompt-box">
+            <p class="prompt-label">Prompt</p>
+            <h3 id="quiz-question">Nami tora?</h3>
+          </div>
+          <div id="quiz-options" class="option-list"></div>
+          <p id="quiz-feedback" class="feedback">Choose an answer to continue.</p>
+        </article>
+
+        <article class="card progress-card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Daily progress</p>
+              <h2>Stay on track</h2>
+            </div>
+            <span class="badge success">Live</span>
+          </div>
+          <div class="progress-ring">
+            <div>
+              <strong id="progress-value">0%</strong>
+              <span>goal completed</span>
+            </div>
+          </div>
+          <ul class="checklist">
+            <li id="task-flashcards">Review 5 flashcards</li>
+            <li id="task-quiz">Answer 3 prompts</li>
+            <li id="task-streak">Keep your streak alive</li>
+          </ul>
+          <button id="reset-progress" class="secondary full-width">
+            Reset practice
+          </button>
+        </article>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
